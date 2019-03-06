@@ -11,19 +11,26 @@ int main()
 
 	int Grade = 0;
 
-	cout << "Please enter in the grade number: ";
+	cout << "Please enter in the grade number (0-100): ";
 	cin >> Grade;
 
-	if (Grade >= 90 && Grade <= 100) {
-		cout << endl << "A" << endl;
+	if (Grade > 89) {
+		cout << endl << "A";
 	}
-	else if (Grade >= 80 && Grade < 90) {
-		cout << endl << "B" << endl;
+	else if (Grade > 79 && Grade < 90) {
+		cout << endl << "B";
 	}
-	else if (Grade >= 70 && Grade < 80) {
-		cout << endl << "C" << endl;
+	else if (Grade > 69 && Grade < 80) {
+		cout << endl << "C";
 	}
-	else if (Grade < 69) {
-		cout << endl << "F" << endl;
+	else if (Grade > 59 && Grade < 70) {
+		cout << endl << "D";
 	}
+	else if (Grade < 59) {
+		cout << endl << "F";
+	}
+
+	cout << endl;
+
+	cout << (Grade > 69 ? "Pass" : "Fail") << endl;
 }
